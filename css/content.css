@@ -1,0 +1,140 @@
+.container {
+    position: relative; 
+    max-width: 1226px;
+    margin: 0 auto;
+
+    margin-top: 5%;
+    max-width: 400px;
+    background-color: wheat;
+    height: 500px;
+    border-radius: 3%;
+}
+
+.btn_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn {
+    font-size: 15px;
+    margin: 5px 40px;
+    background-color: var(--color-gray);
+    border-radius: 10%;
+    border: 1px solid var(--color-white);
+    padding: 5px;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.btn:active {
+    border-color: black;
+    color: black;
+}
+
+.add__btn {
+    background-color: green;
+    min-width: 90px;
+}
+
+.remove__btn {
+    background-color: red;
+    min-width: 90px;
+    min-height: 25px;
+}
+
+.listContainer {
+    padding-top: 10px;
+}
+
+.list__item {
+    display: flex;
+    gap: 4px;
+    justify-self: start;
+}
+
+.elem__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.addNote__input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 10px;
+    padding-left: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-height: 35px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    border-radius: 5%;
+    min-width: 300px;
+    min-height: 100px;
+    color: black;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: default;
+    z-index: 100;
+}
+
+.popup--active {
+    text-align: center;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    max-width: 400px;
+    max-height: 200px;
+    align-content: center;
+    align-self: center;
+    justify-self: center;
+}
+
+.popup_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 10;
+}
+.overlay--active {
+    display: block;
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+}
+
+.shake-effect {
+    animation: shake 0.3s ease-in-out;
+}
